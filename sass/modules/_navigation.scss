@@ -1,0 +1,33 @@
+/* modules/_navigation.scss */
+// ---------------------------------------
+// Navigation type modules
+// ---------------------------------------
+
+.navigation {
+    margin: 0;
+
+    list-style-type: none;
+}
+
+.navigation__item {
+    display: inline-block;
+
+    vertical-align: sub;
+}
+
+.navigation__item--site-wide {
+    margin-left: 35px;
+}
+
+.navigation__item--social {
+    font-size: .7em;
+
+    padding-left: 2px;
+
+    text-transform: uppercase;
+    &:not(:last-child):after {
+        padding-left: 4px;
+
+        content: ' /';
+    }
+}

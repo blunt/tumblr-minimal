@@ -1,0 +1,18 @@
+/* modules/_hashtags.scss */
+// ---------------------------------------
+// Post hashtags
+// ---------------------------------------
+.hashtags {
+    padding-left: 0;
+
+    list-style-type: none;
+}
+
+.hashtags__item {
+    display: inline-block;
+    a:before {
+        font-weight: 700;
+
+        content: '#';
+    }
+}
