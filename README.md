@@ -1,10 +1,13 @@
 # Minimal Tumblr Theme
 
 ## Local
-- Post Single Page (should be shown on top of homepage - as an overlay – Overlay background fades in - Post fades in while sliding up subtly & fades out while sliding down)
+- Post Single Page
+	- Post details (time, notes, hashtags, like/reblog)
+	- Update URL and browser history
+	- Tweak loading animation
+- post--link__url http conditional check
 - Content Page
 - Ask/Submit Page
-- Infinite Scroll (pagination should appear in URL bar)
 - Responsive
 - Cross Browser/Device testing
 - Pass over to @maximsiebert for review
@@ -16,8 +19,13 @@
 - post--panorama
 - post--audio
 - post--video
+- Post Single
+	- Note details
+	- All post types listed above (ensure styling)
 - Post every logical variation of existing posts (note: answer post with replies)
+- Ridiculously long posts
 - QA ^ and implement post fixes
+- Infinite Scroll (pagination should appear in URL bar)
 - Pass over to @maximsiebert for review
 - Resolve any issues from ^
 - Add custom variables for colour and font customization (just examples)
@@ -25,8 +33,10 @@
 ## Questions
 1. How are we linking to CSS file from dynamic theme for production? Once launched?
 2. At what point should this repo be made private?
+3. Inline JS? Or external linking
 
 ## Design Notes
+- Post Single Page (should be shown on top of homepage - as an overlay – Overlay background fades in - Post fades in while sliding up subtly & fades out while sliding down)
 - There is no wrapper, just padding on the left / right of the browser, (thinking 60px, might change) - Since posts are going to be display inline-block, we’ll just add a max width to the posts, and let them flow across the page as they fit
 - Posts should be vertically aligned to the middle of each other, and centred in the browser like in PSD
 - ~~Navigation is fixed, with no background~~
