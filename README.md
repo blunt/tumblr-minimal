@@ -1,7 +1,6 @@
 # Minimal Tumblr Theme
 
 ## Local
-- Content Page
 - Ask/Submit Page
 - Responsive
 - Cross Browser/Device testing

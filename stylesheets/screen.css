@@ -126,6 +126,18 @@ footer ul {
   transform-origin: top left;
 }
 
+/* layouts/_inner-page.scss */
+/* line 6, ../sass/layouts/_inner-page.scss */
+.inner-page main {
+  max-width: 580px;
+  margin: 100px auto 0;
+}
+/* line 9, ../sass/layouts/_inner-page.scss */
+.inner-page main h1 {
+  font-size: 1.7em;
+  font-weight: 400;
+}
+
 /* modules/_navigation.scss */
 /* line 6, ../sass/modules/_navigation.scss */
 .navigation {

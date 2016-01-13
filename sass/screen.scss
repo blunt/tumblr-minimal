@@ -3,7 +3,8 @@
 
 @import 'helpers/base-transition';
 
-@import 'layouts/base';
+@import 'layouts/base',
+		'layouts/inner-page';
 
 @import 'modules/navigation',
 		'modules/action-items',

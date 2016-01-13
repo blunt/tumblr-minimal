@@ -1,0 +1,14 @@
+/* layouts/_inner-page.scss */
+// ---------------------------------------
+// Inner page styles
+// ---------------------------------------
+.inner-page {
+	main {
+		max-width: 580px;
+		margin: 100px auto 0;
+		h1 {
+			font-size: 1.7em;
+			font-weight: 400;
+		}
+	}
+}
