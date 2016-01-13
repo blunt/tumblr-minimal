@@ -3,7 +3,6 @@
 ## Local
 - Post Single Page
 	- Post details (time, notes, hashtags, like/reblog)
-	- Update URL and browser history
 	- Tweak loading animation
 - post--link__url http conditional check
 - Content Page
@@ -21,6 +20,8 @@
 - post--audio
 - post--video
 - Post Single
+	- AJAX content from post URL
+	- Update URL and browser history
 	- Note details
 	- All post types listed above (ensure styling)
 - Post every logical variation of existing posts (note: answer post with replies)
