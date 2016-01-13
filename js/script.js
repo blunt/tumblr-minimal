@@ -6,7 +6,7 @@ $(document).ready(function() {
         postLink = $('._postlink'),
         overlay = $('._overlay'),
         overlayPost = $('._overlaypost'),
-        overlayPostType;
+        postType;
 
     // ---------------------------------------
     // POST SINGLE -- SHOW
@@ -15,14 +15,15 @@ $(document).ready(function() {
         var postId = post.parent().attr('data-id'),
             postContent = post.html(),
             postDetails = $('<div>').append(post.next('.post__more').html());
-
-        postDetails.find('.action-item').remove();
+            
         postType = post.parent().attr('class').split(' ').pop();
-        overlayPost.removeClass(overlayPostType).addClass(postType).html(postContent + postDetails.html());
-        overlay.fadeIn('fast');
-        overlayPost.addClass('overlay__post--visible');
+        postDetails.find('.action-item').remove();
+
+        overlayPost
+            .addClass(postType + ' overlay__post--visible')
+            .html(postContent + postDetails.html());
+        overlay.addClass('overlay--visible');
         body.addClass('no-scroll');
-        overlayPostType = postType;
     }
 
     postLink.click(function() {
@@ -38,14 +39,21 @@ $(document).ready(function() {
     // ---------------------------------------
     // POST SINGLE -- HIDE
     // ---------------------------------------
-    function postSingleHidden(post) {
-        post.fadeOut();
+    function postSingleHidden() {
+        overlay.removeClass('overlay--visible');
         overlayPost.removeClass('overlay__post--visible');
         body.removeClass('no-scroll');
+
+        $('._overlay').one('transitionend webkitTransitionEnd',
+            function() {
+                overlayPost.removeClass(postType);
+                overlayPost.html(' ');
+            }
+        );
     }
 
     overlay.click(function() {
-        postSingleHidden($(this));
+        postSingleHidden();
     }).children().click(function() {
         return false;
     });

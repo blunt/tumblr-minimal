@@ -1,10 +1,6 @@
 # Minimal Tumblr Theme
 
 ## Local
-- Post Single Page
-	- Post details (time, notes, hashtags, like/reblog)
-	- Tweak loading animation
-- post--link__url http conditional check
 - Content Page
 - Ask/Submit Page
 - Responsive
@@ -23,7 +19,9 @@
 	- AJAX content from post URL
 	- Update URL and browser history
 	- Note details
+	- Like/Reblog links
 	- All post types listed above (ensure styling)
+- post--link__url http conditional check (if this is even necessary?)
 - Post every logical variation of existing posts (note: answer post with replies)
 - Ridiculously long posts
 - QA ^ and implement post fixes
