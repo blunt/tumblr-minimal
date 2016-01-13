@@ -196,11 +196,11 @@ footer ul {
 /* modules/_description.scss */
 /* line 6, ../sass/modules/_description.scss */
 .description {
-  text-align: center;
-  max-width: 400px;
-  margin: 125px auto;
   font-size: 1.7em;
   font-weight: 400;
+  max-width: 400px;
+  margin: 125px auto;
+  text-align: center;
 }
 
 /* line 1, ../sass/modules/_copyright.scss */
@@ -247,13 +247,14 @@ footer ul {
   opacity: 1;
 }
 
+/* Post Elements */
 /* line 30, ../sass/modules/_post.scss */
 .post__singlelink {
   position: relative;
   cursor: pointer;
   opacity: 1 !important;
 }
-/* line 35, ../sass/modules/_post.scss */
+/* line 36, ../sass/modules/_post.scss */
 .post__singlelink:before {
   position: absolute;
   top: 0;
@@ -263,12 +264,12 @@ footer ul {
   height: 100%;
   content: '';
 }
-/* line 47, ../sass/modules/_post.scss */
+/* line 48, ../sass/modules/_post.scss */
 .post__singlelink--text {
   padding: 20px;
 }
 
-/* line 52, ../sass/modules/_post.scss */
+/* line 53, ../sass/modules/_post.scss */
 .post__more {
   position: absolute;
   bottom: 10%;
@@ -278,18 +279,18 @@ footer ul {
   opacity: 0;
   color: #fff;
 }
-/* line 63, ../sass/modules/_post.scss */
+/* line 64, ../sass/modules/_post.scss */
 .post__more a {
   color: #fff;
 }
 
-/* line 68, ../sass/modules/_post.scss */
+/* line 69, ../sass/modules/_post.scss */
 .post--photo__caption {
   font-size: 1.8em;
   font-weight: 700;
 }
 
-/* line 73, ../sass/modules/_post.scss */
+/* line 74, ../sass/modules/_post.scss */
 main .post--photo__caption {
   position: absolute;
   top: 12%;
@@ -300,64 +301,65 @@ main .post--photo__caption {
   color: #fff;
 }
 
-/* line 86, ../sass/modules/_post.scss */
+/* line 87, ../sass/modules/_post.scss */
 .overlay .post--photo__caption {
   margin-top: 15px;
 }
 
-/* line 90, ../sass/modules/_post.scss */
+/* line 91, ../sass/modules/_post.scss */
 .post__conversation {
-  list-style-type: none;
-  padding-left: 0;
   margin: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
-/* line 96, ../sass/modules/_post.scss */
+/* line 98, ../sass/modules/_post.scss */
 .post__conversation--lines:last-child p {
   margin-bottom: 0;
 }
 
-/* line 100, ../sass/modules/_post.scss */
+/* line 102, ../sass/modules/_post.scss */
 .post--link__url {
   display: inline-block;
   margin-bottom: .83em;
   border-bottom: 2px solid #222;
 }
 
-/* line 111, ../sass/modules/_post.scss */
+/* Post Modifiers */
+/* line 113, ../sass/modules/_post.scss */
 .post--photo {
   max-width: 800px;
 }
 
-/* line 115, ../sass/modules/_post.scss */
+/* line 117, ../sass/modules/_post.scss */
 .post--blockquote {
   max-width: 500px;
 }
 
-/* line 119, ../sass/modules/_post.scss */
+/* line 121, ../sass/modules/_post.scss */
 .post--text {
   max-width: 400px;
 }
-/* line 122, ../sass/modules/_post.scss */
+/* line 124, ../sass/modules/_post.scss */
 .post--text .post__singlelink p:last-child {
   margin-bottom: 0;
 }
 
-/* line 128, ../sass/modules/_post.scss */
+/* line 130, ../sass/modules/_post.scss */
 .post--link {
   max-width: 350px;
 }
-/* line 130, ../sass/modules/_post.scss */
+/* line 132, ../sass/modules/_post.scss */
 .post--link .post__singlelink {
   min-height: 163px;
 }
 
-/* line 135, ../sass/modules/_post.scss */
+/* line 137, ../sass/modules/_post.scss */
 .post--chat {
   max-width: 400px;
 }
 
-/* line 139, ../sass/modules/_post.scss */
+/* line 141, ../sass/modules/_post.scss */
 .post--answer {
   max-width: 500px;
 }
@@ -366,37 +368,37 @@ main .post--photo__caption {
 /* line 6, ../sass/modules/_overlay.scss */
 .overlay {
   position: fixed;
+  z-index: -1;
   top: 0;
   left: 0;
   overflow: scroll;
   width: 100%;
   height: 100%;
-  opacity: 0;
   padding: 205px 60px;
   text-align: center;
+  opacity: 0;
   background: rgba(240, 240, 240, 0.9);
-  z-index: -1;
-  transition-property: opacity;
-  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
-/* line 23, ../sass/modules/_overlay.scss */
+/* line 24, ../sass/modules/_overlay.scss */
 .overlay--visible {
-  opacity: 1;
   z-index: initial;
+  opacity: 1;
 }
 
-/* line 29, ../sass/modules/_overlay.scss */
+/* line 31, ../sass/modules/_overlay.scss */
 .overlay__post {
   display: inline-block;
   margin: 10px 0 0;
-  opacity: 0;
   text-align: left;
-  transition-property: opacity, transform;
-  transition-duration: 0.1s;
+  opacity: 0;
   transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  transition-property: opacity, transform;
 }
-/* line 38, ../sass/modules/_overlay.scss */
+/* line 41, ../sass/modules/_overlay.scss */
 .overlay__post--visible {
   opacity: 1;
   -moz-transform: translateY(-10px);
@@ -404,11 +406,11 @@ main .post--photo__caption {
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 43, ../sass/modules/_overlay.scss */
+/* line 46, ../sass/modules/_overlay.scss */
 .overlay__post .post__date {
   padding-right: 20px;
 }
-/* line 46, ../sass/modules/_overlay.scss */
+/* line 49, ../sass/modules/_overlay.scss */
 .overlay__post .post__date,
 .overlay__post .post__notes {
   display: inline-block;

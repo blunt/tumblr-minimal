@@ -26,9 +26,10 @@
     }
 }
 
-// Post Elements
+/* Post Elements */
 .post__singlelink {
     position: relative;
+
     cursor: pointer;
 
     opacity: 1 !important;
@@ -88,9 +89,10 @@ main .post--photo__caption {
 }
 
 .post__conversation {
-    list-style-type: none;
-    padding-left: 0;
     margin: 0;
+    padding-left: 0;
+
+    list-style-type: none;
 }
 
 .post__conversation--lines:last-child p {
@@ -107,7 +109,7 @@ main .post--photo__caption {
     @extend h2;
 }
 
-// Post Modifiers
+/* Post Modifiers */
 .post--photo {
     max-width: 800px;
 }

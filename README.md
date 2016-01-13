@@ -1,7 +1,6 @@
 # Minimal Tumblr Theme
 
 ## Local
-- Ask/Submit Page
 - Responsive
 - Cross Browser/Device testing
 - Pass over to @maximsiebert for review
@@ -20,10 +19,16 @@
 	- Note details
 	- Like/Reblog links
 	- All post types listed above (ensure styling)
+- Ask/Submit Page
+- Tag Page
+- Day Page
+- Submissions
+- Content Sources
 - post--link__url http conditional check (if this is even necessary?)
 - Post every logical variation of existing posts (note: answer post with replies)
 - Ridiculously long posts
 - QA ^ and implement post fixes
+- View [documentation](https://www.tumblr.com/docs/en/custom_themes) and ensure everything is covered
 - Infinite Scroll (pagination should appear in URL bar)
 - Pass over to @maximsiebert for review
 - Resolve any issues from ^

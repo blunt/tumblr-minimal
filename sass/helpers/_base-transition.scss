@@ -1,5 +1,5 @@
 @mixin base-transition($property: all, $duration: .2s, $timing-function: ease-in-out) {
-	transition-property: #{$property};
-	transition-duration: $duration;
-	transition-timing-function: $timing-function;
+    transition-timing-function: $timing-function;
+    transition-duration: $duration;
+    transition-property: #{$property};
 }
