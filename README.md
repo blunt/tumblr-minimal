@@ -9,6 +9,7 @@
 ## Dynamic
 - @maximsiebert to come up with name/logo/favicon
 - Add Tumblr base variables and blocks
+- post--text (reblogged with multiple users)
 - post--photoset
 - post--panorama
 - post--audio
