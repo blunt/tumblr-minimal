@@ -21,11 +21,6 @@
     background: rgba(#f0f0f0,.9);
 
     @include base-transition(opacity);
-    &--visible {
-        z-index: initial;
-
-        opacity: 1;
-    }
 }
 
 .overlay__post {
@@ -38,9 +33,7 @@
     opacity: 0;
 
     @include base-transition('opacity, transform', .1s);
-    &--visible {
-        opacity: 1;
-
+    &.visible {
         @include transform(translateY(-10px));
     }
     .post__date {

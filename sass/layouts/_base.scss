@@ -16,7 +16,7 @@ body {
     font-size: 14px;
 
     margin: 0;
-    padding: 60px;
+    padding: 20px;
 
     color: #111;
     &.no-scroll {
@@ -24,11 +24,14 @@ body {
 
         height: 100%;
     }
+    @media (min-width: 625px) {
+        padding: 60px;
+    }
 }
 
 header {
     position: fixed;
-    z-index: 15;
+    z-index: 2;
     top: 0;
     left: 0;
 
@@ -78,7 +81,12 @@ a {
 }
 
 article {
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media (min-width: 625px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 figure {
@@ -103,16 +111,8 @@ blockquote {
     margin-bottom: 0;
 }
 
-footer {
-    position: fixed;
-    top: 190px;
-    right: 0;
+.visible {
+    z-index: initial !important;
 
-    @include transform(translateX(calc(100% - 21px)));
-    ul {
-        padding-left: 0;
-
-        @include transform(rotate(90deg));
-        @include transform-origin(top, left);
-    }
+    opacity: 1 !important;
 }

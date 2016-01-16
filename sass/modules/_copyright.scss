@@ -1,14 +1,24 @@
+/* modules/_copyright.scss */
+// ---------------------------------------
+// Copyright statement
+// ---------------------------------------
+
 .copyright {
-    font-size: .7em;
+    display: none;
+    @media (min-width: 625px) {
+        font-size: .7em;
 
-    position: fixed;
-    bottom: 13px;
-    left: 27px;
+        position: fixed;
+        bottom: 13px;
+        left: 27px;
 
-    text-transform: uppercase;
+        display: block;
 
-    color: #646464;
+        text-transform: uppercase;
 
-    @include transform(rotate(-90deg));
-    @include transform-origin(top, left);
+        color: #646464;
+
+        @include transform(rotate(-90deg));
+        @include transform-origin(top, left);
+    }
 }

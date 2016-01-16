@@ -2,6 +2,7 @@
 
 ## Local
 - Responsive
+	- open menu
 - Cross Browser/Device testing
 - Pass over to @maximsiebert for review
 - Resolve any issues from ^
@@ -28,6 +29,7 @@
 - post--link__url http conditional check (if this is even necessary?)
 - Post every logical variation of existing posts (note: answer post with replies)
 - Ridiculously long posts
+- photo captions
 - QA ^ and implement post fixes
 - View [documentation](https://www.tumblr.com/docs/en/custom_themes) and ensure everything is covered
 - Infinite Scroll (pagination should appear in URL bar)
