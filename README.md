@@ -1,9 +1,7 @@
 # Minimal Tumblr Theme
 
 ## Local
-- Responsive
-	- open menu
-- Cross Browser/Device testing
+- Cross Browser/Device Testing
 - Pass over to @maximsiebert for review
 - Resolve any issues from ^
 
@@ -33,6 +31,8 @@
 - QA ^ and implement post fixes
 - View [documentation](https://www.tumblr.com/docs/en/custom_themes) and ensure everything is covered
 - Infinite Scroll (pagination should appear in URL bar)
+- Responsive
+- Cross Browser/Device Testing
 - Pass over to @maximsiebert for review
 - Resolve any issues from ^
 - Add custom variables for colour and font customization (just examples)

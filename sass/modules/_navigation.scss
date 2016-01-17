@@ -21,10 +21,13 @@
         z-index: -1;
         opacity: 0;
         position: fixed;
-        top: 100px;
+        top: 115px;
         left: 50%;
         @include transform(translateX(-50%));
-        @include base-transition(opacity);
+        @include base-transition('opacity translate');
+        &.visible {
+            @include transform(translateX(-50%) translateY(-15px));
+        }
     }
 }
 

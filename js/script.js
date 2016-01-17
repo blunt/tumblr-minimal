@@ -6,7 +6,10 @@ $(document).ready(function() {
         postLink = $('._postlink'),
         overlay = $('._overlay'),
         overlayPost = $('._overlaypost'),
-        postType;
+        postType,
+        hamburger = $('._hamburger'),
+        nav_sitewide = $('._nav-sitewide'),
+        nav_social = $('._nav-social');
 
     // ---------------------------------------
     // POST SINGLE -- SHOW
@@ -53,7 +56,11 @@ $(document).ready(function() {
     }
 
     overlay.click(function() {
-        postSingleHidden();
+        if(body.hasClass('no-scroll')) {
+            postSingleHidden();
+        } else {
+            menu(hamburger);
+        }
     }).children().click(function() {
         return false;
     });
@@ -67,16 +74,15 @@ $(document).ready(function() {
     // ---------------------------------------
     // MOBILE MENU (HAMBURGER)
     // ---------------------------------------
-    var hamburger = $('._hamburger'),
-        nav_sitewide = $('._nav-sitewide'),
-        nav_social = $('._nav-social');
-
-    hamburger.click(function() {
-        $(this).toggleClass('open');
+    function menu(menu) {
+        menu.toggleClass('open');
         overlay.toggleClass('visible');
         nav_sitewide.toggleClass('visible');
         nav_social.toggleClass('visible');
+    }
 
+    hamburger.click(function() {
+        menu($(this));
         return false;
     });
 });

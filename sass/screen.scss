@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Arimo:400,700),
 		'compass';
 
-@import 'helpers/base-transition';
+@import 'helpers/base-transition',
+		'helpers/flexbox';
 
 @import 'layouts/base',
 		'layouts/inner-page';
