@@ -168,9 +168,9 @@ blockquote {
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.2s;
     transition-property: opacity translate;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
   }
   /* line 28, ../sass/modules/_navigation.scss */
   .navigation--site-wide.visible {
@@ -212,9 +212,9 @@ blockquote {
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
   transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 /* line 58, ../sass/modules/_navigation.scss */
 .navigation--social.visible {
@@ -286,9 +286,9 @@ blockquote {
   width: 35px;
   height: 2px;
   background-color: black;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
   transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 /* line 31, ../sass/modules/_hamburger.scss */
 .hamburger span:before, .hamburger span:after {
@@ -298,9 +298,9 @@ blockquote {
   height: 2px;
   content: '';
   background-color: black;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
   transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 /* line 45, ../sass/modules/_hamburger.scss */
 .hamburger span:before {
@@ -579,9 +579,9 @@ main .post--photo__caption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
   transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 /* line 27, ../sass/modules/_overlay.scss */
@@ -590,22 +590,23 @@ main .post--photo__caption {
   margin: 0;
   text-align: left;
   opacity: 0;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
-  transition-property: all;
+  -moz-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
 }
-/* line 37, ../sass/modules/_overlay.scss */
+/* line 38, ../sass/modules/_overlay.scss */
 .overlay__post.visible {
   -moz-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 40, ../sass/modules/_overlay.scss */
+/* line 41, ../sass/modules/_overlay.scss */
 .overlay__post .post__date {
   padding-right: 20px;
 }
-/* line 43, ../sass/modules/_overlay.scss */
+/* line 44, ../sass/modules/_overlay.scss */
 .overlay__post .post__date,
 .overlay__post .post__notes {
   display: inline-block;

@@ -2,6 +2,7 @@
 
 ## Local
 - Cross Browser/Device Testing
+	- Firefox overlay transition not happening :(
 - Pass over to @maximsiebert for review
 - Resolve any issues from ^
 

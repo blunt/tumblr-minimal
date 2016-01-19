@@ -33,7 +33,8 @@
 
     opacity: 0;
 
-    @include base-transition();
+    // @include base-transition();
+    @include transition(all, .2s, ease-in-out);
     &.visible {
         @include transform(translateY(-10px));
     }
