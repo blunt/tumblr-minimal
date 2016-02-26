@@ -3,11 +3,9 @@
 ## Local
 - Cross Browser/Device Testing
 	- Firefox overlay transition not happening :(
-- Pass over to @maximsiebert for review
-- Resolve any issues from ^
 
 ## Dynamic
-- @maximsiebert to come up with name/logo/favicon
+- Maxim to come up with name/logo/favicon
 - Add Tumblr base variables and blocks
 - post--text (reblogged with multiple users)
 - post--photoset
