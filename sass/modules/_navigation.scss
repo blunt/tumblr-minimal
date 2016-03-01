@@ -13,11 +13,12 @@
 .navigation__item {
     display: inline-block;
 
-    vertical-align: sub;
+    vertical-align: bottom;
 }
 
 .navigation--site-wide {
-    @media (max-width: 624px) {
+    font-size: 1.2rem;
+    @media (max-width: $mobile-breakpoint - 1) {
         position: fixed;
         z-index: -1;
         top: 115px;
@@ -34,7 +35,7 @@
 }
 
 .navigation--site-wide__item {
-    @media (max-width: 624px) {
+    @media (max-width: $mobile-breakpoint - 1) {
         font-size: 18px;
 
         display: block;
@@ -46,7 +47,7 @@
             font-weight: 400;
         }
     }
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         margin-left: 35px;
     }
 }
@@ -64,7 +65,7 @@
     &.visible {
         z-index: 3 !important;
     }
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         z-index: 1;
         right: 20px;
         left: auto;

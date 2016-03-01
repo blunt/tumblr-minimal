@@ -113,19 +113,19 @@ main .post--photo__caption {
 
 /* Post Modifiers */
 .post--photo {
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         max-width: 800px;
     }
 }
 
 .post--blockquote {
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         max-width: 500px;
     }
 }
 
 .post--text {
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         max-width: 400px;
     }
     .post__singlelink {
@@ -136,7 +136,7 @@ main .post--photo__caption {
 }
 
 .post--link {
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         max-width: 350px;
     }
     .post__singlelink {
@@ -145,13 +145,13 @@ main .post--photo__caption {
 }
 
 .post--chat {
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         max-width: 400px;
     }
 }
 
 .post--answer {
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         max-width: 500px;
     }
 }

@@ -87,7 +87,7 @@ a {
 article {
     margin-top: 20px;
     margin-bottom: 20px;
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         margin-left: 20px;
         margin-right: 20px;
     }

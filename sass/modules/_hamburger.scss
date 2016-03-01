@@ -13,7 +13,7 @@
     height: 26px;
 
     @include transform(translateY(-50%));
-    @media (min-width: 625px) {
+    @media (min-width: $mobile-breakpoint) {
         display: none;
     }
     span {

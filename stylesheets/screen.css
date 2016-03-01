@@ -94,7 +94,7 @@ article {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 87, ../sass/layouts/_base.scss */
   article {
     margin-left: 20px;
@@ -153,10 +153,14 @@ blockquote {
 /* line 13, ../sass/modules/_navigation.scss */
 .navigation__item {
   display: inline-block;
-  vertical-align: sub;
+  vertical-align: bottom;
 }
 
-@media (max-width: 624px) {
+/* line 19, ../sass/modules/_navigation.scss */
+.navigation--site-wide {
+  font-size: 1.2rem;
+}
+@media (max-width: 674px) {
   /* line 19, ../sass/modules/_navigation.scss */
   .navigation--site-wide {
     position: fixed;
@@ -172,7 +176,7 @@ blockquote {
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
   }
-  /* line 30, ../sass/modules/_navigation.scss */
+  /* line 31, ../sass/modules/_navigation.scss */
   .navigation--site-wide.visible {
     -moz-transform: translateX(-50%) translateY(-15px);
     -ms-transform: translateX(-50%) translateY(-15px);
@@ -181,27 +185,27 @@ blockquote {
   }
 }
 
-@media (max-width: 624px) {
-  /* line 36, ../sass/modules/_navigation.scss */
+@media (max-width: 674px) {
+  /* line 37, ../sass/modules/_navigation.scss */
   .navigation--site-wide__item {
     font-size: 18px;
     display: block;
     margin-bottom: 1em;
     text-align: center;
   }
-  /* line 45, ../sass/modules/_navigation.scss */
+  /* line 46, ../sass/modules/_navigation.scss */
   .navigation--site-wide__item a {
     font-weight: 400;
   }
 }
-@media (min-width: 625px) {
-  /* line 36, ../sass/modules/_navigation.scss */
+@media (min-width: 675px) {
+  /* line 37, ../sass/modules/_navigation.scss */
   .navigation--site-wide__item {
     margin-left: 35px;
   }
 }
 
-/* line 54, ../sass/modules/_navigation.scss */
+/* line 55, ../sass/modules/_navigation.scss */
 .navigation--social {
   position: fixed;
   z-index: -1;
@@ -216,12 +220,12 @@ blockquote {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
-/* line 64, ../sass/modules/_navigation.scss */
+/* line 65, ../sass/modules/_navigation.scss */
 .navigation--social.visible {
   z-index: 3 !important;
 }
-@media (min-width: 625px) {
-  /* line 54, ../sass/modules/_navigation.scss */
+@media (min-width: 675px) {
+  /* line 55, ../sass/modules/_navigation.scss */
   .navigation--social {
     z-index: 1;
     right: 20px;
@@ -232,19 +236,19 @@ blockquote {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
-  /* line 75, ../sass/modules/_navigation.scss */
+  /* line 76, ../sass/modules/_navigation.scss */
   .navigation--social ul {
     padding-left: 0;
   }
 }
 
-/* line 81, ../sass/modules/_navigation.scss */
+/* line 82, ../sass/modules/_navigation.scss */
 .navigation--social__item {
   font-size: .7em;
   padding-left: 2px;
   text-transform: uppercase;
 }
-/* line 87, ../sass/modules/_navigation.scss */
+/* line 88, ../sass/modules/_navigation.scss */
 .navigation--social__item:not(:last-child):after {
   padding-left: 4px;
   content: ' /';
@@ -263,7 +267,7 @@ blockquote {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 6, ../sass/modules/_hamburger.scss */
   .hamburger {
     display: none;
@@ -362,7 +366,7 @@ blockquote {
 .copyright {
   display: none;
 }
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 6, ../sass/modules/_copyright.scss */
   .copyright {
     font-size: .7em;
@@ -483,21 +487,21 @@ main .post--photo__caption {
 }
 
 /* Post Modifiers */
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 115, ../sass/modules/_post.scss */
   .post--photo {
     max-width: 800px;
   }
 }
 
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 121, ../sass/modules/_post.scss */
   .post--blockquote {
     max-width: 500px;
   }
 }
 
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 127, ../sass/modules/_post.scss */
   .post--text {
     max-width: 400px;
@@ -508,7 +512,7 @@ main .post--photo__caption {
   margin-bottom: 0;
 }
 
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 138, ../sass/modules/_post.scss */
   .post--link {
     max-width: 350px;
@@ -519,14 +523,14 @@ main .post--photo__caption {
   min-height: 163px;
 }
 
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 147, ../sass/modules/_post.scss */
   .post--chat {
     max-width: 400px;
   }
 }
 
-@media (min-width: 625px) {
+@media (min-width: 675px) {
   /* line 153, ../sass/modules/_post.scss */
   .post--answer {
     max-width: 500px;
