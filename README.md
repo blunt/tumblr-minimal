@@ -1,9 +1,5 @@
 # Minimal Tumblr Theme
 
-## Local
-- Cross Browser/Device Testing
-	- Firefox overlay transition not happening :(
-
 ## Dynamic
 - Maxim to come up with name/logo/favicon
 - Add Tumblr base variables and blocks
