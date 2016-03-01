@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 /* layouts/_base.scss */
 /* line 6, ../sass/layouts/_base.scss */
 *,
@@ -11,7 +11,7 @@
 
 /* line 14, ../sass/layouts/_base.scss */
 body {
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   margin: 0;
   padding: 20px;
