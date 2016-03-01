@@ -9,7 +9,8 @@ $(document).ready(function() {
         postType,
         hamburger = $('._hamburger'),
         nav_sitewide = $('._nav-sitewide'),
-        nav_social = $('._nav-social');
+        nav_social = $('._nav-social'),
+        time = 500;
 
     // ---------------------------------------
     // POST SINGLE -- SHOW
@@ -47,12 +48,11 @@ $(document).ready(function() {
         overlayPost.removeClass('visible');
         body.removeClass('no-scroll');
 
-        $('._overlay').one('transitionend webkitTransitionEnd',
-            function() {
-                overlayPost.removeClass(postType);
-                overlayPost.html(' ');
-            }
-        );
+        setTimeout(function() {
+            overlayPost.removeClass(postType);
+            overlayPost.html('');
+
+        }, time);
     }
 
     overlay.click(function() {
