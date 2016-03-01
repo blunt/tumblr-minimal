@@ -62,10 +62,10 @@
     @include transform(translateX(-50%));
     @include base-transition(opacity);
     &.visible {
-        z-index: 2 !important;
+        z-index: 3 !important;
     }
     @media (min-width: 625px) {
-        z-index: initial;
+        z-index: 1;
         right: 20px;
         left: auto;
 

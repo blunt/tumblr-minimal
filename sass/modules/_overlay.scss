@@ -22,6 +22,10 @@
 
     @include flexbox(column,center,center);
     @include base-transition(opacity);
+
+    &.visible {
+        z-index: 2 !important;
+    }
 }
 
 .overlay__post {

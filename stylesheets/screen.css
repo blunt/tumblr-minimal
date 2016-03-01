@@ -32,7 +32,7 @@ body.no-scroll {
 /* line 32, ../sass/layouts/_base.scss */
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
@@ -218,12 +218,12 @@ blockquote {
 }
 /* line 64, ../sass/modules/_navigation.scss */
 .navigation--social.visible {
-  z-index: 2 !important;
+  z-index: 3 !important;
 }
 @media (min-width: 625px) {
   /* line 54, ../sass/modules/_navigation.scss */
   .navigation--social {
-    z-index: initial;
+    z-index: 1;
     right: 20px;
     left: auto;
     opacity: 1;
@@ -567,8 +567,12 @@ main .post--photo__caption {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
+/* line 26, ../sass/modules/_overlay.scss */
+.overlay.visible {
+  z-index: 2 !important;
+}
 
-/* line 27, ../sass/modules/_overlay.scss */
+/* line 31, ../sass/modules/_overlay.scss */
 .overlay__post {
   display: inline-block;
   margin: 0;
@@ -579,18 +583,18 @@ main .post--photo__caption {
   -webkit-transition: all, 0.2s, ease-in-out;
   transition: all, 0.2s, ease-in-out;
 }
-/* line 38, ../sass/modules/_overlay.scss */
+/* line 42, ../sass/modules/_overlay.scss */
 .overlay__post.visible {
   -moz-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 41, ../sass/modules/_overlay.scss */
+/* line 45, ../sass/modules/_overlay.scss */
 .overlay__post .post__date {
   padding-right: 20px;
 }
-/* line 44, ../sass/modules/_overlay.scss */
+/* line 48, ../sass/modules/_overlay.scss */
 .overlay__post .post__date,
 .overlay__post .post__notes {
   display: inline-block;
