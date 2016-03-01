@@ -20,7 +20,6 @@
     opacity: 0;
     background: rgba(#f0f0f0,.9);
 
-    @include flexbox(column,center,center);
     @include base-transition(opacity);
 
     &.visible {
@@ -30,6 +29,8 @@
 
 .overlay__post {
     display: inline-block;
+    position: relative;
+    top: 30px;
 
     margin: 0;
 

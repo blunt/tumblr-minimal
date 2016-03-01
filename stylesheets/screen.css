@@ -551,34 +551,20 @@ main .post--photo__caption {
   text-align: center;
   opacity: 0;
   background: rgba(240, 240, 240, 0.9);
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   transition-property: opacity;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
-/* line 26, ../sass/modules/_overlay.scss */
+/* line 25, ../sass/modules/_overlay.scss */
 .overlay.visible {
   z-index: 2 !important;
 }
 
-/* line 31, ../sass/modules/_overlay.scss */
+/* line 30, ../sass/modules/_overlay.scss */
 .overlay__post {
   display: inline-block;
+  position: relative;
+  top: 30px;
   margin: 0;
   text-align: left;
   opacity: 0;
@@ -587,18 +573,18 @@ main .post--photo__caption {
   -webkit-transition: all, 0.2s, ease-in-out;
   transition: all, 0.2s, ease-in-out;
 }
-/* line 42, ../sass/modules/_overlay.scss */
+/* line 43, ../sass/modules/_overlay.scss */
 .overlay__post.visible {
   -moz-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
-/* line 45, ../sass/modules/_overlay.scss */
+/* line 46, ../sass/modules/_overlay.scss */
 .overlay__post .post__date {
   padding-right: 20px;
 }
-/* line 48, ../sass/modules/_overlay.scss */
+/* line 49, ../sass/modules/_overlay.scss */
 .overlay__post .post__date,
 .overlay__post .post__notes {
   display: inline-block;
