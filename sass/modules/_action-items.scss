@@ -3,7 +3,9 @@
 // Like, Reblog, External Link - Action items
 // ---------------------------------------
 
-.action-item {
+.action-item,
+.like_button,
+.reblog_button {
     display: inline-block;
 
     max-width: 18px;

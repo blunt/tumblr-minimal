@@ -61,7 +61,7 @@ nav {
 }
 
 /* line 59, ../sass/layouts/_base.scss */
-h2, blockquote, .post--link__url {
+h2, .quote, .post--link__url {
   font-size: 1.7em;
   margin-top: 0;
 }
@@ -112,7 +112,7 @@ figure img {
 }
 
 /* line 103, ../sass/layouts/_base.scss */
-blockquote {
+.quote {
   font-weight: 700;
   margin-left: 0;
 }
@@ -328,7 +328,9 @@ blockquote {
 
 /* modules/_action-item.scss */
 /* line 6, ../sass/modules/_action-items.scss */
-.action-item {
+.action-item,
+.like_button,
+.reblog_button {
   display: inline-block;
   max-width: 18px;
   margin: 0 3px 1em;
