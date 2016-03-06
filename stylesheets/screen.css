@@ -193,16 +193,16 @@ blockquote {
     margin-bottom: 1em;
     text-align: center;
   }
-  /* line 46, ../sass/modules/_navigation.scss */
-  .navigation--site-wide__item a {
-    font-weight: 400;
-  }
 }
 @media (min-width: 675px) {
   /* line 37, ../sass/modules/_navigation.scss */
   .navigation--site-wide__item {
     margin-left: 35px;
   }
+}
+/* line 50, ../sass/modules/_navigation.scss */
+.navigation--site-wide__item a {
+  font-weight: 400;
 }
 
 /* line 55, ../sass/modules/_navigation.scss */
