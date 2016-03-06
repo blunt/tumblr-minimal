@@ -38,8 +38,8 @@ header {
     width: 100%;
     margin: 0 auto;
     padding-top: 20px;
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
     @media (min-width: 625px) {
         padding-right: 60px;
         padding-left: 60px;
@@ -47,9 +47,9 @@ header {
 }
 
 .logo {
-    display: inline-block;
+    font-size: 1.2rem;
 
-    max-width: 80px;
+    display: inline-block;
 }
 
 nav {
@@ -88,8 +88,8 @@ article {
     margin-top: 20px;
     margin-bottom: 20px;
     @media (min-width: $mobile-breakpoint) {
-        margin-left: 20px;
         margin-right: 20px;
+        margin-left: 20px;
     }
 }
 

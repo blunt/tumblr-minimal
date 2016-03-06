@@ -14,6 +14,9 @@
 	- Note details
 	- Like/Reblog links
 	- All post types listed above (ensure styling)
+- Dynamic social media menu
+- Proper URL functionality
+- Ability to upload logo image?
 - Ask/Submit Page
 - Tag Page
 - Day Page
@@ -30,7 +33,7 @@
 - Cross Browser/Device Testing
 - Pass over to @maximsiebert for review
 - Resolve any issues from ^
-- Add custom variables for colour and font customization (just examples)
+- Add custom variables for colour and font customization (https://www.tumblr.com/docs/en/custom_themes#theme-options)
 
 ## Questions
 1. How are we linking to CSS file from dynamic theme for production? Once launched?

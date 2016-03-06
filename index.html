@@ -5,26 +5,28 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Tumblr Theme 1</title>
-		<meta name="description" content="This is where the blog description will go">
+		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 
-		<!-- <link rel="apple-touch-icon" href="{PortraitURL-128}">
+		<link rel="apple-touch-icon" href="{PortraitURL-128}">
 		<link rel="shortcut icon" href="{Favicon}">
 		<link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}">
-		<link rel="alternate" type="application/rss+xml" href="{RSS}"> -->
+		<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
 		<link rel="stylesheet" href="stylesheets/screen.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 	<body>
 		<header>
-			<a class="logo" href="index.html"><img src="img/logo.png" alt="Tumblr Theme 1 logo"></a>
+			{block:ShowTitle}<a class="logo" href="/">{Title}</a>{/block:ShowTitle}
 			<nav>
 				<a href="#" class="hamburger _hamburger" title="Open menu"><span></span></a>
 				<ul class="navigation navigation--site-wide _nav-sitewide">
-					<li class="navigation__item navigation--site-wide__item"><a href="">More themes</a></li>
-					<li class="navigation__item navigation--site-wide__item"><a href="">Archive</a></li>
-					<li class="navigation__item navigation--site-wide__item"><a href="">Random</a></li>
-					<li class="navigation__item navigation--site-wide__item"><a href="info.html">Info</a></li>
+					{block:HasPages}
+						{block:Pages}<li class="navigation__item navigation--site-wide__item"><a href="{URL}">{Label}</a></li>{/block:Pages}
+					{/block:HasPages}
+        			<li class="navigation__item navigation--site-wide__item"><a href="/archive">{lang:Archive}</a></li>
+        			{block:AskEnabled}<li class="navigation__item navigation--site-wide__item"><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
 				</ul>
 			</nav>
 		</header>
@@ -37,336 +39,149 @@
 		</nav>
 
 		<main>
-			<h1 class="description">A super clean grid based theme with support for all post types.</h1>
+			{block:ShowDescription}
+				{block:Description}
+					<h1 class="description">{Description}</h1>
+				{/block:Description}
+			{/block:ShowDescription}
 
 			<section class="posts">
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-1.jpg" alt="" width="" height="">
-			          			<figcaption class="post--photo__caption">Example photo caption</figcaption>
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-2.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+				{block:Posts}
+					<article class="post post--{PostType}" data-id="{PostID}">
+						{block:Text}
+							<!-- Text -->
+							<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
+						        {block:Title}<h2>{Title}</h2>{/block:Title}
+						        {block:Body}
+						        	{Body}
+					        	{/block:Body}
+							</div>
+					    {/block:Text}
 
-				<!-- Link -->
-				<article class="post post--link" data-id="2">
-					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
-						<a class="post--link__url external" target="_blank" href="weareblunt.co">weareblunt.co</a>
-						<p>Felis euismod semper. Donec ullamcorper.</p>
-					</div>
-					<div class="post__more">
-						<a href="weareblunt.co" class="action-item external"><img src="img/external.png" alt="View external link"></a>
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      		</div>
-				</article>
+					    {block:Quote}
+	      					<!-- Quote -->
+							<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
+								<blockquote>{Quote}</blockquote>
+								{block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+							</div>
+      					{/block:Quote}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-5.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+      					{block:Link}
+	      					<!-- Link -->
+							<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
+								<a class="post--link__url external" {Target} href="{URL}">{Name}</a>
+								{block:Description}<p>{Description}</p>{/block:Description}
+							</div>
+      					{/block:Link}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-4.jpg" alt="" width="" height="">
-			          			<figcaption class="post--photo__caption">Example photo caption</figcaption>
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+      					{block:Audio}
+      						<!-- Audio -->
+      						<!-- Gotta implement this -->
+					    {/block:Audio}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-6.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+					    {block:Photo}
+					    	<!-- Photo -->
+        					<div class="post__singlelink _postlink" tabindex="0">
+								<figure>
+					          			<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
+					          			{block:Caption}<figcaption class="post--photo__caption">{Caption}</figcaption>{/block:Caption}
+					       		</figure>
+				      		</div>
+      					{/block:Photo}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-7.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+      					{block:Photoset}
+					        <!-- Photoset -->
+					        <!-- GOtta implement this -->
+					    {/block:Photoset}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-8.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+					    {block:Panorama}
+					        <!-- Panorama -->
+					        <!-- GOtta implement this -->
+					    {/block:Panorama}
 
-				<!-- Quote -->
-				<article class="post post--blockquote" data-id="3">
-					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
-						<blockquote>
-							Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.
-						</blockquote>
-						<p class="source">&mdash; Maxim Siebert</p>
-					</div>
-					<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      		</div>
-				</article>
+					    {block:Video}
+					        <!-- Video -->
+					        <!-- GOtta implement this -->
+					    {/block:Video}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-9.jpg" alt="" width="" height="">
-			          			<figcaption class="post--photo__caption">This is an example of what a semi long caption would look like</figcaption>
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+					    {block:Chat}
+        					<!-- Chat -->
+        					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
+								{block:Title}<h2>{Title}</h2>{/block:Title}
+								<ul class="post__conversation">
+									{block:Lines}
+										<li class="post__conversation--lines {Alt}">
+											<p>{block:Label}<strong>{Label}:</strong>{/block:Label} {Line}</p>
+										</li>
+									{/block:Lines}
+								</ul>
+							</div>
+      					{/block:Chat}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-10.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+      					{block:Answer}
+        					<!-- Answer -->
+        					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
+								<div class="post--answer__question">
+									<p>{Asker}: {Question}</p>
+								</div>
+								{block:Answerer}
+									<div class="post--answer__answerer">
+										<p>{Answerer}: {Answer}</p>
+									</div>
+								{/block:Answerer}
+								<div class="post--answer__replies">
+									{Replies}
+								</div>
+							</div>
+      					{/block:Answer}
 
-				<!-- Text -->
-				<article class="post post--text" data-id="4">
-					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
-						<h2>Vestibulum id ligula porta</h2>
-						<p>Felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra auguetotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro...</p>
-					</div>
-					<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      		</div>
-				</article>
+						<div class="post__more">
+							{block:Link}
+								<!-- This might not work :( -->
+								<a href="{URL}" class="action-item external"><img src="img/external.png" alt="View external link"></a>
+							{/block:Link}
+			      			{LikeButton color="white"}
+			      			{ReblogButton color="white"}
+			      			{block:Date}
+					        	{block:NewDayDate}<p class="post__date">{TimeAgo}</p>{/block:NewDayDate}
+					        	{block:SameDayDate}<p class="post__date">{TimeAgo}</p>{/block:SameDayDate}
+					      	{/block:Date}
+					      	{block:NoteCount}
+			      				<p class="post__notes">
+			      					{NoteCountWithLabel} 
+			      					– via 
+			      					{block:ContentSource}
+			      						<a href="{SourceURL}">{SourceTitle}</a>
+			      					{/block:ContentSource}
+			      				</p>
+			      			{/block:NoteCount}
+			      			{block:HasTags}
+				      			<ul class="hashtags">
+				      				{block:Tags}
+				      					<li class="hashtags__item"><a href="{TagURL}">{Tag}</a></li>
+				      				{/block:Tags}
+				      			</ul>
+			      			{/block:HasTags}
+			      		</div>
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-11.jpg" alt="" width="" height="">
-			          			<figcaption class="post--photo__caption">Short caption</figcaption>
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
+			      		{block:IndexPage}
+					        {LikeButton}
+					        {ReblogButton}
+					        <p><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>
+      					{/block:IndexPage}
+					</article>
+				{/block:Posts}
 
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-12.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
-
-				<!-- Chat -->
-				<article class="post post--chat" data-id="5">
-					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
-						<h2>Ligula porta</h2>
-						<ul class="post__conversation">
-							<li class="post__conversation--lines">
-								<p><strong>Felis Euismod: </strong>Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra auguetotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							</li>
-							<li class="post__conversation--lines">
-								<p><strong>Nemo Enim Ipsam: </strong>oluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro.</p>
-							</li>
-						</ul>
-					</div>
-					<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      		</div>
-				</article>
-
-				<!-- Answer -->
-				<article class="post post--answer" data-id="6">
-					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
-						<div class="post--answer__question">
-							<p><a href="">Felis Euismod</a>: Felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra auguetotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						</div>
-						<div class="post--answer__answerer">
-							<p><a href="">Nemo Enim Ipsam</a>: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro.</p>
-						</div>
-						<div class="post--answer__replies">
-							<!-- Work out replies once dynamic -->
-						</div>
-					</div>
-					<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      		</div>
-				</article>
-
-				<!-- Photo -->
-				<article class="post post--photo" data-id="1">
-		          	<div class="post__singlelink _postlink" tabindex="0">
-						<figure>
-			          			<img src="img/image-13.jpg" alt="" width="" height="">
-			       		</figure>
-		      		</div>
-		      		<div class="post__more">
-		      			<a href="" class="action-item"><img src="img/like.png" alt="Like this post"></a>
-		      			<a href="" class="action-item"><img src="img/reblog.png" alt="Reblog this post"></a>
-		      			<p class="post__date">6 months ago</p>
-		      			<p class="post__notes">14 notes – via <a href="">teamsound</a></p>
-		      			<ul class="hashtags">
-		      				<li class="hashtags__item"><a href="">hashtag</a></li>
-		      				<li class="hashtags__item"><a href="">anotherone</a></li>
-		      			</ul>
-		      		</div>
-				</article>
 			</section>
 		</main>
 
-		<footer>
-			<!-- Copyright -->
-			<p class="copyright">Copyright &copy; blunt</p>
-		</footer>
-
+		{block:ShowTitle}
+			<footer>
+				<!-- Copyright -->
+				<p class="copyright">Copyright &copy; {Title}</p>
+			</footer>
+		{/block:ShowTitle}
 
 		<section class="overlay _overlay">
 			<article class="overlay__post _overlaypost">
