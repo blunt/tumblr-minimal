@@ -597,7 +597,7 @@ main .post--photo__caption {
 #x1cpostage_box:before, #x1cpostage_box:after,
 #x1cpostage_box *:before,
 #x1cpostage_box *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
 }
