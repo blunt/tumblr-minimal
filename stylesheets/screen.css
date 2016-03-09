@@ -455,9 +455,9 @@ main .post--photo__caption {
   position: absolute;
   top: 12%;
   left: 0;
-  padding-left: 20px;
-  padding-right: 20px;
   width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
   text-align: center;
   opacity: 0;
   color: #fff;
@@ -520,25 +520,25 @@ main .post--photo__caption {
 }
 
 @media (min-width: 675px) {
-  /* line 143, ../sass/modules/_post.scss */
+  /* line 144, ../sass/modules/_post.scss */
   .post--link {
     max-width: 350px;
   }
 }
-/* line 147, ../sass/modules/_post.scss */
+/* line 148, ../sass/modules/_post.scss */
 .post--link .post__singlelink {
   min-height: 163px;
 }
 
 @media (min-width: 675px) {
-  /* line 152, ../sass/modules/_post.scss */
+  /* line 153, ../sass/modules/_post.scss */
   .post--chat {
     max-width: 400px;
   }
 }
 
 @media (min-width: 675px) {
-  /* line 158, ../sass/modules/_post.scss */
+  /* line 159, ../sass/modules/_post.scss */
   .post--answer {
     max-width: 500px;
   }

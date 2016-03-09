@@ -15,6 +15,11 @@
 
 		<link rel="stylesheet" href="https://rawgit.com/blunt/tumblr-minimal/master/stylesheets/screen.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<meta name="text:Instagram Username" content=""/>
+		<meta name="text:Facebook Username" content=""/>
+ 		<meta name="text:Twitter Username" content=""/>
+ 		<meta name="text:Pinterest Username" content=""/>
 	</head>
 	<body>
 		<header>
@@ -32,9 +37,18 @@
 		</header>
 		<nav class="navigation--social _nav-social">
 			<ul class="navigation">
-				<li class="navigation__item navigation--social__item"><a href="">Instagram</a></li>
-				<li class="navigation__item navigation--social__item"><a href="">Facebook</a></li>
-				<li class="navigation__item navigation--social__item"><a href="">Twitter</a></li>
+        		{block:IfInstagramUsername}
+        			<li class="navigation__item navigation--social__item"><a href="https://www.instagram.com/{text:Instagram Username}" target="_blank">Instagram</a></li>
+        		{/block:IfInstagramUsername}
+        		{block:IfFacebookUsername}
+					<li class="navigation__item navigation--social__item"><a href="https://www.facebook.com/{text:Facebook Username}" target="_blank">Facebook</a></li>
+        		{/block:IfFacebookUsername}
+        		{block:IfTwitterUsername}
+					<li class="navigation__item navigation--social__item"><a href="https://twitter.com/{text:Twitter Username}" target="_blank">Twitter</a></li>
+        		{/block:IfTwitterUsername}
+        		{block:IfPinterestUsername}
+            		<li class="navigation__item navigation--social__item"><a href="https://pinterest.com/{text:Pinterest Username}" target="_blank">Pinterest</a></li>
+        		{/block:IfPinterestUsername}
 			</ul>
 		</nav>
 
@@ -48,6 +62,9 @@
 			<section class="posts">
 
 				{block:Posts}
+					{block:ContentSource}
+					<!-- {SourceURL} -->
+					{/block:ContentSource}
 					<article class="post post--{PostType}" data-id="{PostID}">
 						{block:Text}
 							<!-- Text -->
@@ -151,9 +168,9 @@
 			      				<p class="post__notes">
 			      					{NoteCountWithLabel} 
 			      					– via 
-			      					{block:ContentSource}
-			      						<a href="{SourceURL}">{SourceTitle}</a>
-			      					{/block:ContentSource}
+			      					{block:RebloggedFrom}
+			      						<a href="{ReblogParentURL}">{ReblogParentName}</a>
+			      					{/block:RebloggedFrom}
 			      				</p>
 			      			{/block:NoteCount}
 			      			{block:HasTags}
