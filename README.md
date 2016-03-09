@@ -1,38 +1,5 @@
 # Minimal Tumblr Theme
 
-## Dynamic
-- Maxim to come up with name/logo/favicon
-- post--text (reblogged with multiple users)
-- post--photoset
-- post--panorama
-- post--audio
-- post--video
-- Post Single
-	- AJAX content from post URL
-	- Update URL and browser history
-	- Note details
-	- Like/Reblog links
-	- All post types listed above (ensure styling)
-- Dynamic social media menu
-- Ability to upload logo image?
-- Ask/Submit Page
-- Tag Page
-- Day Page
-- Submissions
-- Content Sources
-- post--link__url http conditional check (if this is even necessary?)
-- Post every logical variation of existing posts (note: answer post with replies)
-- Ridiculously long posts
-- photo captions
-- QA ^ and implement post fixes
-- View [documentation](https://www.tumblr.com/docs/en/custom_themes) and ensure everything is covered
-- Infinite Scroll (pagination should appear in URL bar)
-- Responsive
-- Cross Browser/Device Testing
-- Pass over to @maximsiebert for review
-- Resolve any issues from ^
-- Add custom variables for colour and font customization (https://www.tumblr.com/docs/en/custom_themes#theme-options)
-
 ## Questions
 1. How are we linking to CSS file from dynamic theme for production? Once launched?
 2. At what point should this repo be made private?

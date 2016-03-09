@@ -331,8 +331,7 @@ figure img {
 .action-item,
 .like_button,
 .reblog_button {
-  display: inline-block;
-  max-width: 18px;
+  display: inline-block !important;
   margin: 0 3px 1em;
 }
 

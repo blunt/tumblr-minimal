@@ -6,8 +6,7 @@
 .action-item,
 .like_button,
 .reblog_button {
-    display: inline-block;
+    display: inline-block !important;
 
-    max-width: 18px;
     margin: 0 3px 1em;
 }
