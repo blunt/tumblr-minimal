@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 /* layouts/_base.scss */
 /* line 6, ../sass/layouts/_base.scss */
-*,
-*:before,
-*:after {
+*:not(#x1cpostage_box),
+*:not(#x1cpostage_box):before,
+*:not(#x1cpostage_box):after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -512,27 +512,33 @@ main .post--photo__caption {
 .post--text .post__singlelink p:last-child {
   margin-bottom: 0;
 }
+/* line 136, ../sass/modules/_post.scss */
+.post--text blockquote {
+  margin-left: 0;
+  padding-left: 25px;
+  border-left: 1px solid #ddd;
+}
 
 @media (min-width: 675px) {
-  /* line 138, ../sass/modules/_post.scss */
+  /* line 143, ../sass/modules/_post.scss */
   .post--link {
     max-width: 350px;
   }
 }
-/* line 142, ../sass/modules/_post.scss */
+/* line 147, ../sass/modules/_post.scss */
 .post--link .post__singlelink {
   min-height: 163px;
 }
 
 @media (min-width: 675px) {
-  /* line 147, ../sass/modules/_post.scss */
+  /* line 152, ../sass/modules/_post.scss */
   .post--chat {
     max-width: 400px;
   }
 }
 
 @media (min-width: 675px) {
-  /* line 153, ../sass/modules/_post.scss */
+  /* line 158, ../sass/modules/_post.scss */
   .post--answer {
     max-width: 500px;
   }
@@ -590,14 +596,4 @@ main .post--photo__caption {
 .overlay__post .post__notes {
   display: inline-block;
   padding-top: 5px;
-}
-
-/* modules/_xkit.scss */
-/* line 8, ../sass/modules/_xkit.scss */
-#x1cpostage_box:before, #x1cpostage_box:after,
-#x1cpostage_box *:before,
-#x1cpostage_box *:after {
-  -webkit-box-sizing: content-box !important;
-  -moz-box-sizing: content-box !important;
-  box-sizing: content-box !important;
 }

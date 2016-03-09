@@ -133,6 +133,11 @@ main .post--photo__caption {
             margin-bottom: 0;
         }
     }
+    blockquote {
+        margin-left: 0;
+        padding-left: 25px;
+        border-left: 1px solid #ddd;
+    }
 }
 
 .post--link {

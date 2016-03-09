@@ -3,9 +3,9 @@
 // General element styles
 // ---------------------------------------
 
-*,
-*:before,
-*:after {
+*:not(#x1cpostage_box),
+*:not(#x1cpostage_box):before,
+*:not(#x1cpostage_box):after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
