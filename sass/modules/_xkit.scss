@@ -1,0 +1,14 @@
+/* modules/_xkit.scss */
+// ---------------------------------------
+// Ensures xkit hover box doesn't break
+// ---------------------------------------
+
+#x1cpostage_box,
+#x1cpostage_box *, {
+	&:before,
+	&:after {
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;
+	}
+}

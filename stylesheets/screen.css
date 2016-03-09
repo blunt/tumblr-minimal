@@ -591,3 +591,13 @@ main .post--photo__caption {
   display: inline-block;
   padding-top: 5px;
 }
+
+/* modules/_xkit.scss */
+/* line 8, ../sass/modules/_xkit.scss */
+#x1cpostage_box:before, #x1cpostage_box:after,
+#x1cpostage_box *:before,
+#x1cpostage_box *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
