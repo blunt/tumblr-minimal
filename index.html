@@ -62,12 +62,13 @@
 			<section class="posts">
 
 				{block:Posts}
-					{block:ContentSource}
-					<!-- {SourceURL} -->
-					{/block:ContentSource}
+					<!-- {PostType} -->
 					<article class="post post--{PostType}" data-id="{PostID}">
+						{block:ContentSource}
+						<!-- {SourceURL} -->
+						{/block:ContentSource}
+
 						{block:Text}
-							<!-- Text -->
 							<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
 						        {block:Title}<h2>{Title}</h2>{/block:Title}
 						        {block:Body}
@@ -77,7 +78,6 @@
 					    {/block:Text}
 
 					    {block:Quote}
-	      					<!-- Quote -->
 							<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
 								<blockquote class="quote">{Quote}</blockquote>
 								{block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
@@ -85,7 +85,6 @@
       					{/block:Quote}
 
       					{block:Link}
-	      					<!-- Link -->
 							<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
 								<a class="post--link__url external" {Target} href="{URL}">{Name}</a>
 								{block:Description}<p>{Description}</p>{/block:Description}
@@ -93,12 +92,10 @@
       					{/block:Link}
 
       					{block:Audio}
-      						<!-- Audio -->
       						<!-- Gotta implement this -->
 					    {/block:Audio}
 
 					    {block:Photo}
-					    	<!-- Photo -->
         					<div class="post__singlelink _postlink" tabindex="0">
 								<figure>
 					          			<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
@@ -108,22 +105,27 @@
       					{/block:Photo}
 
       					{block:Photoset}
-					        <!-- Photoset -->
-					        <!-- GOtta implement this -->
+					        <div class="post__singlelink _postlink" tabindex="0">
+						        <figure>
+						        	<div class="photoset__grid" data-layout="{PhotosetLayout}">
+										{block:Photos}
+											<img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}"/>
+										{/block:Photos}
+									</div>
+						          {block:Caption}<figcaption class="post--photo__caption">{Caption}</figcaption>{/block:Caption}
+						        </figure>
+						    </div>
 					    {/block:Photoset}
 
 					    {block:Panorama}
-					        <!-- Panorama -->
-					        <!-- GOtta implement this -->
+					        <!-- Gotta implement this -->
 					    {/block:Panorama}
 
 					    {block:Video}
-					        <!-- Video -->
-					        <!-- GOtta implement this -->
+					        <!-- Gotta implement this -->
 					    {/block:Video}
 
 					    {block:Chat}
-        					<!-- Chat -->
         					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
 								{block:Title}<h2>{Title}</h2>{/block:Title}
 								<ul class="post__conversation">
@@ -137,7 +139,6 @@
       					{/block:Chat}
 
       					{block:Answer}
-        					<!-- Answer -->
         					<div class="post__singlelink post__singlelink--text _postlink" tabindex="0">
 								<div class="post--answer__question">
 									<p>{Asker}: {Question}</p>
@@ -199,7 +200,8 @@
 				
 			</article>
 		</section>
-
+		
+		<script src="https://rawgit.com/blunt/tumblr-minimal/master/js/jquery.photoset-grid.min.js"></script>
 		<script src="https://rawgit.com/blunt/tumblr-minimal/master/js/script.js"></script>
 	</body>
 </html>

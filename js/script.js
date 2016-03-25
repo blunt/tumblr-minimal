@@ -85,4 +85,9 @@ $(document).ready(function() {
         menu($(this));
         return false;
     });
+
+    // ---------------------------------------
+    // PHOTOSET LAYOUT
+    // ---------------------------------------
+    $('.photoset__grid').photosetGrid();
 });
