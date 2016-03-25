@@ -495,29 +495,25 @@ main .post--photo__caption {
     max-width: 800px;
   }
 }
-/* line 119, ../sass/modules/_post.scss */
-.post--photo img:nth-child(n+1) {
-  margin-top: .75em;
-}
 
 @media (min-width: 675px) {
-  /* line 124, ../sass/modules/_post.scss */
+  /* line 121, ../sass/modules/_post.scss */
   .post--blockquote {
     max-width: 500px;
   }
 }
 
 @media (min-width: 675px) {
-  /* line 130, ../sass/modules/_post.scss */
+  /* line 127, ../sass/modules/_post.scss */
   .post--text {
     max-width: 400px;
   }
 }
-/* line 135, ../sass/modules/_post.scss */
+/* line 132, ../sass/modules/_post.scss */
 .post--text .post__singlelink p:last-child {
   margin-bottom: 0;
 }
-/* line 139, ../sass/modules/_post.scss */
+/* line 136, ../sass/modules/_post.scss */
 .post--text blockquote {
   margin-left: 0;
   padding-left: 25px;
@@ -525,25 +521,25 @@ main .post--photo__caption {
 }
 
 @media (min-width: 675px) {
-  /* line 147, ../sass/modules/_post.scss */
+  /* line 144, ../sass/modules/_post.scss */
   .post--link {
     max-width: 350px;
   }
 }
-/* line 151, ../sass/modules/_post.scss */
+/* line 148, ../sass/modules/_post.scss */
 .post--link .post__singlelink {
   min-height: 163px;
 }
 
 @media (min-width: 675px) {
-  /* line 156, ../sass/modules/_post.scss */
+  /* line 153, ../sass/modules/_post.scss */
   .post--chat {
     max-width: 400px;
   }
 }
 
 @media (min-width: 675px) {
-  /* line 162, ../sass/modules/_post.scss */
+  /* line 159, ../sass/modules/_post.scss */
   .post--answer {
     max-width: 500px;
   }

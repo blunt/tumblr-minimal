@@ -89,5 +89,7 @@ $(document).ready(function() {
     // ---------------------------------------
     // PHOTOSET LAYOUT
     // ---------------------------------------
-    $('.photoset__grid').photosetGrid();
+    $('.photoset__grid').photosetGrid({
+        gutter: '15px'
+    });
 });
