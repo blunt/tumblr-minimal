@@ -116,6 +116,9 @@ main .post--photo__caption {
     @media (min-width: $mobile-breakpoint) {
         max-width: 800px;
     }
+    img:nth-child(n+1) {
+        margin-top: .75em;
+    }
 }
 
 .post--blockquote {
